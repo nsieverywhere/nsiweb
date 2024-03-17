@@ -1,0 +1,63 @@
+.body {
+  position: relative;
+}
+
+.section1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+  position: relative;
+}
+
+.herotext {
+  text-align: center;
+  position: absolute;
+  left: 0rem;
+  padding: 0 4rem;
+}
+
+.section1 h1 {
+  margin-bottom: 2rem;
+}
+
+.section1 p {
+  padding: 0 3rem;
+}
+
+.section2 {
+  background-color: #dcc9f6;
+  height: 100vh;
+}
+
+.heroimg {
+  position: absolute;
+  right: -0rem;
+  top: 8rem;
+}
+
+.line {
+  margin-left: 2rem;
+}
+
+.img1 {
+  position: absolute;
+  left: 8rem;
+  top: -3rem;
+}
+
+.img2 {
+  position: absolute;
+  left: -2rem;
+  top: 8rem;
+}
+
+.img3 {
+  position: absolute;
+  left: 12rem;
+  top: 18rem;
+}
+
+.section2{
+}

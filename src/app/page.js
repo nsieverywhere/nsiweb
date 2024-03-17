@@ -1,95 +1,67 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import Image from "next/image";
+import styles from "./page.module.css";
+import Navbar from "../../components/Navbar";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [profileHovered, setProfileHovered] = useState(false);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <html lang="en">
+      <title>Home</title>
+      <body className={styles.body}>
+        <Navbar />
+        <div className={styles.container}>
+          <div
+            className={`${styles.leftText} ${
+              profileHovered ? styles.profile_hovered : ""
+            }`}
           >
-            By{' '}
+            <p>HI,</p>
+            <p> I AM NSIKAN SIMON,</p>
+            <h1
+              className={` ${profileHovered ? styles.h1_profile_hovered : ""}`}
+            >
+              SOFTWARE
+            </h1>
+          </div>
+          <div className={styles.centerDiv}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              className={styles.Nsikan_profile}
+              src={"/images/Nsikan.png"}
+              width={350}
+              height={350}
+              onMouseOver={() => setProfileHovered(true)}
+              onMouseOut={() => setProfileHovered(false)}
             />
-          </a>
+          </div>
+          <div
+            className={`${styles.rightText} ${
+              profileHovered ? styles.right_profile_hovered : ""
+            }`}
+          >
+            <h1
+              className={`${profileHovered ? styles.h1_profile_hovered : ""}`}
+            >
+              ENGINEER
+            </h1>
+          </div>
+          <div className={styles.bottomText}>
+            <p className={styles.description}>
+              I create web experiences for companies and individuals, with a
+              focus on building a unique digital experience.
+            </p>
+            <Link className={styles.worklink} href="/works">
+              <div className={styles.works}>
+                <p>Works</p>
+                <p class={styles.line}></p>
+              </div>
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </body>
+    </html>
+  );
 }

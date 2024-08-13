@@ -52,8 +52,8 @@ const Works = () => {
             </div>
           </div>
           <div className={`row ${styles.section2} `}>
-        
-        </div>
+            <h2>PROJECTS</h2>
+          </div>
         </div>
       </body>
     </html>

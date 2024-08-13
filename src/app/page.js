@@ -20,7 +20,7 @@ export default function Home() {
             }`}
           >
             <p>HI,</p>
-            <p> I AM NSIKAN SIMON, dev</p>
+            <p> I AM NSIKAN SIMON,</p>
             <h1
               className={` ${profileHovered ? styles.h1_profile_hovered : ""}`}
             >

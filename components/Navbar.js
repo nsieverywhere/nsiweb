@@ -29,7 +29,7 @@ function Navbar() {
         />
       </div>
 
-      <ul className= {`${styles.ul} ${nav ? styles.menuVisible : ''}`}>
+      <ul className={`${styles.ul} ${nav ? styles.menuVisible : ""}`}>
         <li
           className={`${styles.li_style} ${
             activeLink === "/" ? styles.activeLink : ""

@@ -1,0 +1,15 @@
+.section1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12rem;
+  position: relative;
+}
+
+.section1 h1 {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

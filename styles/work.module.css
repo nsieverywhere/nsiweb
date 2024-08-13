@@ -59,5 +59,13 @@
   top: 18rem;
 }
 
-.section2{
+.section2 {
+  padding: 3rem;
+}
+
+.section2 h2 {
+  color: #18122b;
+  justify-content: center;
+  display: flex;
+  /* align-items: center; */
 }
